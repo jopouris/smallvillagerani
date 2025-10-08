@@ -1,8 +1,8 @@
-// Firebase SDK imports
+// === Firebase SDK imports ===
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
 
-// Firebase configuration
+// === Firebase configuration ===
 const firebaseConfig = {
   apiKey: "AIzaSyBuN5dn_PNC37CbiaRaQRx78gds6f-JXbI",
   authDomain: "smallvillagerani.firebaseapp.com",
@@ -12,11 +12,11 @@ const firebaseConfig = {
   appId: "1:762742575521:web:0fbd4b3bd62caafe013be0"
 };
 
-// Initialize Firebase
+// === Initialize Firebase ===
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Example: Add a new event to Firestore
+// === Add event to Firestore ===
 async function addEvent(title, date) {
   try {
     await addDoc(collection(db, "calendarEvents"), {
@@ -29,7 +29,7 @@ async function addEvent(title, date) {
   }
 }
 
-// Example: Read all events
+// === Load events from Firestore ===
 async function loadEvents() {
   const querySnapshot = await getDocs(collection(db, "calendarEvents"));
   const events = [];
@@ -40,5 +40,41 @@ async function loadEvents() {
   return events;
 }
 
-// Example test: Load events when page loads
-window.addEventListener("DOMContentLoaded", loadEvents);
+// === Render FullCalendar ===
+async function renderCalendar() {
+  const events = await loadEvents();
+
+  const calendarEl = document.getElementById("calendar");
+
+  if (!calendarEl) {
+    console.error("❌ Calendar container not found (add <div id='calendar'></div> in your HTML)");
+    return;
+  }
+
+  const calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "dayGridMonth",
+    events: events.map(e => ({
+      title: e.title,
+      start: e.date
+    })),
+    selectable: true,
+    select: async function (info) {
+      const title = prompt("Πληκτρολόγησε τίτλο για το γεγονός:");
+      if (title) {
+        await addEvent(title, info.startStr);
+        calendar.addEvent({ title: title, start: info.startStr });
+      }
+    },
+    eventColor: "#0d9488", // όμορφο teal χρώμα
+    headerToolbar: {
+      left: "prev,next today",
+      center: "title",
+      right: "dayGridMonth,timeGridWeek,timeGridDay"
+    }
+  });
+
+  calendar.render();
+}
+
+// === Load calendar when page loads ===
+window.addEventListener("DOMContentLoaded", renderCalendar);
