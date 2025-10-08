@@ -1,4 +1,5 @@
 [build]
-  publish = "smallvillagerani.html"
+  publish = "."
+
 
 
