@@ -1,0 +1,44 @@
+// Firebase SDK imports
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+
+// Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBuN5dn_PNC37CbiaRaQRx78gds6f-JXbI",
+  authDomain: "smallvillagerani.firebaseapp.com",
+  projectId: "smallvillagerani",
+  storageBucket: "smallvillagerani.firebasestorage.app",
+  messagingSenderId: "762742575521",
+  appId: "1:762742575521:web:0fbd4b3bd62caafe013be0"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
+// Example: Add a new event to Firestore
+async function addEvent(title, date) {
+  try {
+    await addDoc(collection(db, "calendarEvents"), {
+      title: title,
+      date: date
+    });
+    console.log("✅ Event added successfully!");
+  } catch (error) {
+    console.error("❌ Error adding event: ", error);
+  }
+}
+
+// Example: Read all events
+async function loadEvents() {
+  const querySnapshot = await getDocs(collection(db, "calendarEvents"));
+  const events = [];
+  querySnapshot.forEach((doc) => {
+    events.push({ id: doc.id, ...doc.data() });
+  });
+  console.log("📅 Loaded events:", events);
+  return events;
+}
+
+// Example test: Load events when page loads
+window.addEventListener("DOMContentLoaded", loadEvents);
