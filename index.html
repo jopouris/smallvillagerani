@@ -895,25 +895,10 @@ window.addEventListener('error', function(e){
   </button>
 </section>
 
-<script type="module">
-  import { addEvent, loadEvents } from './firebase-calendar.js';
-
-  document.getElementById("add-btn").addEventListener("click", () => {
-    const title = prompt("Τίτλος event:");
-    const date = prompt("Ημερομηνία (π.χ. 2025-10-10):");
-    if (title && date) addEvent({ title, date });
-  });
-
-  // Φόρτωσε όλα τα events μόλις ανοίξει η σελίδα
-  loadEvents();
-</script>
-<!-- 🔹 ΤΕΛΟΣ: Ενότητα Ημερολογίου Firebase -->
-
-<script src="firebase-calendar.js"></script>
-
 <script src="firebase-calendar.js"></script>
 </body>
 </html>
+
 
 
 
