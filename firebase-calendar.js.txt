@@ -1,80 +1,41 @@
-// === Firebase SDK imports ===
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore.js";
+// firebase-calendar.js
 
-// === Firebase configuration ===
+// Φόρτωση Firebase SDKs
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
+
+// 🔹 Αντιγραφή των στοιχείων από το Firebase project σου
 const firebaseConfig = {
-  apiKey: "AIzaSyBuN5dn_PNC37CbiaRaQRx78gds6f-JXbI",
-  authDomain: "smallvillagerani.firebaseapp.com",
-  projectId: "smallvillagerani",
-  storageBucket: "smallvillagerani.firebasestorage.app",
-  messagingSenderId: "762742575521",
-  appId: "1:762742575521:web:0fbd4b3bd62caafe013be0"
+  apiKey: "API_KEY_ΣΟΥ",
+  authDomain: "PROJECT_ID.firebaseapp.com",
+  projectId: "PROJECT_ID",
+  storageBucket: "PROJECT_ID.appspot.com",
+  messagingSenderId: "SENDER_ID",
+  appId: "APP_ID"
 };
 
-// === Initialize Firebase ===
+// Αρχικοποίηση Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// === Add event to Firestore ===
-async function addEvent(title, date) {
-  try {
-    await addDoc(collection(db, "calendarEvents"), {
-      title: title,
-      date: date
-    });
-    console.log("✅ Event added successfully!");
-  } catch (error) {
-    console.error("❌ Error adding event: ", error);
-  }
+// 🔹 Προσθήκη event στη Firestore
+export async function addEvent(eventData) {
+  await addDoc(collection(db, "events"), eventData);
+  alert("Το event προστέθηκε!");
 }
 
-// === Load events from Firestore ===
-async function loadEvents() {
-  const querySnapshot = await getDocs(collection(db, "calendarEvents"));
-  const events = [];
+// 🔹 Ανάγνωση όλων των events
+export async function loadEvents() {
+  const querySnapshot = await getDocs(collection(db, "events"));
+  const list = document.getElementById("calendar-events");
+  list.innerHTML = "";
   querySnapshot.forEach((doc) => {
-    events.push({ id: doc.id, ...doc.data() });
+    const data = doc.data();
+    list.innerHTML += `<li>${data.title} - ${data.date}</li>`;
   });
-  console.log("📅 Loaded events:", events);
-  return events;
 }
 
-// === Render FullCalendar ===
-async function renderCalendar() {
-  const events = await loadEvents();
-
-  const calendarEl = document.getElementById("calendar");
-
-  if (!calendarEl) {
-    console.error("❌ Calendar container not found (add <div id='calendar'></div> in your HTML)");
-    return;
-  }
-
-  const calendar = new FullCalendar.Calendar(calendarEl, {
-    initialView: "dayGridMonth",
-    events: events.map(e => ({
-      title: e.title,
-      start: e.date
-    })),
-    selectable: true,
-    select: async function (info) {
-      const title = prompt("Πληκτρολόγησε τίτλο για το γεγονός:");
-      if (title) {
-        await addEvent(title, info.startStr);
-        calendar.addEvent({ title: title, start: info.startStr });
-      }
-    },
-    eventColor: "#0d9488", // όμορφο teal χρώμα
-    headerToolbar: {
-      left: "prev,next today",
-      center: "title",
-      right: "dayGridMonth,timeGridWeek,timeGridDay"
-    }
-  });
-
-  calendar.render();
-}
 
 // === Load calendar when page loads ===
 window.addEventListener("DOMContentLoaded", renderCalendar);
+
