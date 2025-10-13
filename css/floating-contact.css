@@ -1,0 +1,11 @@
+/* Floating Contact Buttons */
+.contact-buttons{
+  position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:10px;z-index:3000;
+}
+.contact-buttons a{
+  display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;text-decoration:none;
+  background:var(--accent-2);color:#fff;font-weight:700;box-shadow:var(--shadow-sm);
+  transition:transform var(--transition),box-shadow var(--transition);
+}
+.contact-buttons a:hover{transform:scale(1.05);box-shadow:var(--shadow-md)}
+.contact-buttons a i{font-size:18px}

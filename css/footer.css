@@ -1,0 +1,7 @@
+/* Footer */
+footer{
+  margin-top:36px;padding:28px 0;text-align:center;color:#fff;
+  background:linear-gradient(90deg,var(--accent-2),var(--accent));
+  border-radius:12px;box-shadow:var(--shadow-sm);
+}
+footer p{margin:6px 0 0}
