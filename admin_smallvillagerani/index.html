@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bookings Viewer — Small Villa Gerani</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <h1>Bookings Viewer</h1>
+    <p>Small Villa Gerani — Firestore</p>
+  </header>
+
+  <main>
+    <section class="controls">
+      <input id="search" type="search" placeholder="Αναζήτηση (όνομα, email)..." />
+      <select id="sort">
+        <option value="createdAt_desc">Πιο πρόσφατες</option>
+        <option value="createdAt_asc">Παλαιότερες</option>
+        <option value="checkin_asc">Check-in ↑</option>
+        <option value="checkin_desc">Check-in ↓</option>
+      </select>
+      <button id="refresh">Ανανέωση</button>
+      <button id="export">Export CSV</button>
+      <span id="status" class="status">—</span>
+    </section>
+<!-- Edit Modal -->
+<div id="edit-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="edit-title">
+  <div class="modal-card">
+    <h3 id="edit-title">Επεξεργασία Κράτησης</h3>
+    <form id="edit-form">
+      <input type="hidden" id="edit-id" />
+      <div class="grid">
+        <label>
+          Όνομα
+          <input id="edit-name" type="text" required />
+        </label>
+        <label>
+          Email
+          <input id="edit-email" type="email" required />
+        </label>
+        <label>
+          Check-in
+          <input id="edit-checkin" type="date" required />
+        </label>
+        <label>
+          Check-out
+          <input id="edit-checkout" type="date" required />
+        </label>
+      </div>
+      <label>
+        Μήνυμα
+        <textarea id="edit-message" rows="4"></textarea>
+      </label>
+
+      <div class="actions">
+        <button type="button" id="edit-cancel">Άκυρο</button>
+        <button type="submit" id="edit-save" class="primary">Αποθήκευση</button>
+      </div>
+    </form>
+    <button class="modal-close" id="edit-close" aria-label="Κλείσιμο">×</button>
+  </div>
+</div>
+
+    <section class="table-wrap">
+      <table id="bookings-table">
+        <thead>
+  <tr>
+    <th>#</th>
+    <th>Όνομα</th>
+    <th>Email</th>
+    <th>Check-in</th>
+    <th>Check-out</th>
+    <th>Μήνυμα</th>
+    <th>Δημιουργήθηκε</th>
+    <th>Ενέργειες</th> <!-- ΝΕΟ -->
+  </tr>
+</thead>
+
+        <tbody id="tbody">
+          <!-- rows injected -->
+        </tbody>
+      </table>
+      <div id="empty" class="empty hidden">Δεν βρέθηκαν καταχωρήσεις.</div>
+    </section>
+  </main>
+
+  <footer>
+    <small>© Small Villa Gerani</small>
+  </footer>
+
+  <!-- Firebase + App logic -->
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
