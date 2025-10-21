@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Small Villa Gerani — Small Villa in Evia / Μικρή Βίλα στην Εύβοια</title>
+  <meta name="description" content="Small Villa Gerani — Μια πανέμορφη βίλα στην Εύβοια. Κράτηση, φωτογραφίες, προτάσεις και επαφή.">
+  <meta name="keywords" content="βίλα Εύβοια, villa Evia, διακοπές, booking, μικρή βίλα">
+  <meta name="theme-color" content="#2f855a">
+
+  <!-- External CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ 
+
+  <link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/about.css">
+<link rel="stylesheet" href="css/gallery.css">
+<link rel="stylesheet" href="css/cards.css">
+<link rel="stylesheet" href="css/booking.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/modal.css">
+<link rel="stylesheet" href="css/floating-contact.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+</head>
+<body>
+  
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="brand">
+        <a href="#" aria-label="Small Villa Gerani home">
+          <img src="images/logo.jpg" alt="Small Villa Gerani logo" class="logo-img" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2250%22 height=%2250%22%3E%3Crect fill=%22%232f855a%22 width=%2250%22 height=%2250%22/%3E%3Ctext x=%2225%22 y=%2230%22 font-size=%2220%22 text-anchor=%22middle%22 fill=%22white%22%3ESV%3C/text%3E%3C/svg%3E'">
+        </a>
+        <div>
+          <div class="site-title">Small Villa Gerani</div>
+          <div style="font-size:12px;color:var(--muted)">Evia, Greece · Εύβοια, Ελλάδα</div>
+        </div>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" data-i18n="nav_home">Αρχική</a></li>
+        <li><a href="#about" data-i18n="nav_about">Σχετικά</a></li>
+        <li><a href="#gallery" data-i18n="nav_gallery">Γκαλερί</a></li>
+        <li><a href="#suggestions" data-i18n="nav_suggestions">Προτάσεις</a></li>
+        <li><a href="#sights" data-i18n="nav_sights">Αξιοθέατα</a></li>
+        <li><a href="#booking" data-i18n="nav_booking">Κράτηση</a></li>
+        <li><button id="lang-toggle" class="lang-button" aria-pressed="false">EN</button></li>
+      </ul>
+
+      <button class="menu-toggle" id="menu-toggle" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#24303a" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container">
+      <h1 data-i18n="hero_title">Small Villa Gerani</h1>
+      <p data-i18n="hero_text">Η απόλαυση της χαλάρωσης απαιτεί χώρους φτιαγμένους για να την υποδέχονται</p>
+      <div style="display:flex; gap:12px; justify-content:center; margin-top:12px; flex-wrap:wrap;">
+        <a class="cta-button" href="#booking" data-i18n="hero_cta">Κάντε Αίτημα Κράτησης</a>
+        <a class="cta-button" href="#gallery" style="background:transparent;color:var(--white);border:2px solid var(--white);" data-i18n="view_gallery">Δείτε τη Γκαλερί</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 data-i18n="nav_about">Σχετικά με τη Small Villa Gerani</h2>
+      <p class="lead" data-i18n="about_lead">Μια μικρή, φιλόξενη βίλα στην Εύβοια — ιδανική για χαλαρωτικές διακοπές, εξερεύνηση παραλιών και δραστηριότητες στη φύση.</p>
+      <div class="about-content">
+        <div>
+          <p data-i18n="about_text1">Καλώς ήρθατε στη Small Villa Gerani: έναν ήρεμο χώρο για οικογένειες ή παρέες που αναζητούν ποιότητα και άνεση.</p>
+          <p style="margin-top:15px;" data-i18n="about_text2">Πλήρως εξοπλισμένη βίλα με κουζίνα, ευρύχωρα υπνοδωμάτια, εξωτερικό χώρο και εύκολη πρόσβαση σε παραλίες και μονοπάτια.</p>
+         <ul style="margin-top:12px;">
+  <li data-i18n="about_feature1">Γρήγορο Wi-Fi & Smart TV</li>
+  <li data-i18n="about_feature2">Πλήρης κουζίνα & εξωτερική ψησταριά</li>
+  <li data-i18n="about_feature3">Προσβάσιμο parking & κοντά σε δραστηριότητες</li>
+</ul>
+
+        </div>
+        <div class="about-image">
+          <img src="images/exterior view.jpg" alt="Εξωτερική όψη της Small Villa Gerani" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22400%22 height=%22300%22/%3E%3Ctext x=%22200%22 y=%22150%22 font-size=%2218%22 text-anchor=%22middle%22 fill=%22%23718096%22%3EVilla Image%3C/text%3E%3C/svg%3E'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section">
+    <div class="container">
+      <h2 data-i18n="nav_gallery">Γκαλερί</h2>
+      <p class="lead" data-i18n="gallery_lead">Φωτογραφίες από τους εσωτερικούς και εξωτερικούς χώρους της βίλας.</p>
+      <div class="gallery">
+        <div class="gallery-item" tabindex="0" onclick="openModal('images/bedroom1.jpg','Υπνοδωμάτιο 1')">
+          <img src="images/bedroom1.jpg" alt="Υπνοδωμάτιο 1" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22250%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22280%22 height=%22250%22/%3E%3C/svg%3E'">
+          <div class="overlay" data-i18n="room1">Υπνοδωμάτιο 1</div>
+        </div>
+        <div class="gallery-item" tabindex="0" onclick="openModal('images/bedroom2.jpg','Υπνοδωμάτιο 2')">
+          <img src="images/bedroom2.jpg" alt="Υπνοδωμάτιο 2" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22250%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22280%22 height=%22250%22/%3E%3C/svg%3E'">
+          <div class="overlay" data-i18n="room2">Υπνοδωμάτιο 2</div>
+        </div>
+        <div class="gallery-item" tabindex="0" onclick="openModal('images/living-room.jpg','Σαλόνι')">
+          <img src="images/living-room.jpg" alt="Σαλόνι" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22250%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22280%22 height=%22250%22/%3E%3C/svg%3E'">
+          <div class="overlay" data-i18n="living_room">Σαλόνι</div>
+        </div>
+        <div class="gallery-item" tabindex="0" onclick="openModal('images/kitchen.jpg','Κουζίνα')">
+          <img src="images/kitchen.jpg" alt="Κουζίνα" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22250%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22280%22 height=%22250%22/%3E%3C/svg%3E'">
+          <div class="overlay" data-i18n="kitchen">Κουζίνα</div>
+        </div>
+        <div class="gallery-item" tabindex="0" onclick="openModal('images/exterior1.jpg','Εξωτερικό 1')">
+          <img src="images/exterior1.jpg" alt="Εξωτερικός χώρος 1" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22250%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22280%22 height=%22250%22/%3E%3C/svg%3E'">
+          <div class="overlay" data-i18n="exterior1">Εξωτερικό 1</div>
+        </div>
+        <div class="gallery-item" tabindex="0" onclick="openModal('images/exterior2.jpg','Εξωτερικό 2')">
+          <img src="images/exterior2.jpg" alt="Εξωτερικός χώρος 2" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22250%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22280%22 height=%22250%22/%3E%3C/svg%3E'">
+          <div class="overlay" data-i18n="exterior2">Εξωτερικό 2</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUGGESTIONS -->
+   <!-- SUGGESTIONS / Beaches -->
+  <section id="suggestions" class="section" aria-labelledby="suggestions-title">
+    <div class="container">
+      <h2 id="suggestions-title" data-i18n="suggestions_title">Προτάσεις για Επισκέπτες</h2>
+      <p class="lead" data-i18n="suggestions_lead">Επιλογές για παραλίες, αξιοθέατα και δραστηριότητες κοντά στη βίλα.</p>
+
+      <div class="suggestions-grid" role="list">
+        <!-- Θαψά -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="thapsa-title">
+          <img src="images/thapsa.jpg" alt="Παραλία Θαψά" loading="lazy" onclick="openModal('images/thapsa.jpg','Παραλία Θαψά')">
+          <div class="suggestion-content">
+            <h3 id="thapsa-title" data-i18n="beach_thapsa_title">Παραλία Θαψά</h3>
+            <p data-i18n="beach_thapsa_text">Μικρή, ήσυχη παραλία με αμμουδιά και κρυστάλλινα νερά — ιδανική για όσους θέλουν χαλάρωση μακριά από τα πλήθη.</p>
+            <a href="https://www.google.com/maps/place/%CE%98%CE%B1%CF%88%CE%AC/@38.6744084,24.0065087,13.25z/data=!4m6!3m5!1s0x14a153b098925ef5:0xa8edc47c42f01267!8m2!3d38.6752751!4d24.0133346!16s%2Fg%2F1pzrxnv13?entry=ttu" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Σουτσίνι -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="soutsini-title">
+          <img src="images/soutsini.jpg" alt="Παραλία Σουτσίνι" loading="lazy" onclick="openModal('images/soutsini.jpg','Παραλία Σουτσίνι')">
+          <div class="suggestion-content">
+            <h3 id="soutsini-title" data-i18n="beach_soutsini_title">Παραλία Σουτσίνι</h3>
+            <p data-i18n="beach_soutsini_text">Βραχώδης ακτή με καθαρά νερά και ωραίο βυθό — αγαπημένη για snorkeling και κοντινές βόλτες στην ακτή.</p>
+            <a href="https://www.google.com/maps/place/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1+%CE%A3%CE%BF%CF%85%CF%84%CF%83%CE%AF%CE%BD%CE%B7/@38.6403031,24.1310182,17.79z/data=!4m6!3m5!1s0x14a155f2c0069859:0xca8070a5a54099d3!8m2!3d38.6407227!4d24.1333916!16s%2Fg%2F12llvmqh_" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Στόμιο -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="stomio-title">
+          <img src="images/stomio.jpg" alt="Παραλία Στόμιο" loading="lazy" onclick="openModal('images/stomio.jpg','Παραλία Στόμιο')">
+          <div class="suggestion-content">
+            <h3 id="stomio-title" data-i18n="beach_stomio_title">Παραλία Στόμιο</h3>
+            <p data-i18n="beach_stomio_text">Το ενδιαφέρον τοπίο όπου ο ποταμός συναντά τη θάλασσα δημιουργεί μοναδική ατμόσφαιρα — ωραίο για φωτογραφίες και εξερεύνηση.</p>
+            <a href="https://www.google.com/maps/place/%CE%A0%CE%91%CE%A1%CE%91%CE%9B%CE%99%CE%91+%CE%A3%CE%A4%CE%9F%CE%9C%CE%99%CE%9F%CE%A5/@38.583177,24.1332862,18.29z/" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Μουρτερή -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="mourteri-title">
+          <img src="images/mourteri.jpg" alt="Παραλία Μουρτερή" loading="lazy" onclick="openModal('images/mourteri.jpg','Παραλία Μουρτερή')">
+          <div class="suggestion-content">
+            <h3 id="mourteri-title" data-i18n="beach_mourteri_title">Παραλία Μουρτερή</h3>
+            <p data-i18n="beach_mourteri_text">Μεγάλη, οργανωμένη παραλία με επιλογές σε ταβέρνες και beach bars — ιδανική για οικογένειες και άνετες μέρες στη θάλασσα.</p>
+            <a href="https://www.google.com/maps/place/%CE%A4%CE%AD%CE%BB%CE%BF%CF%82+%CF%80%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1%CF%82+%CE%9C%CE%BF%CF%85%CF%81%CF%84%CE%B5%CF%81%CE%AE%CF%82+-+%CE%98%CE%AD%CF%83%CE%B7+%CE%9A%CE%B5%CF%86%CE%AC%CE%BB%CE%B1" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Κάλαμος -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="kalamos-title">
+          <img src="images/kalamos.jpg" alt="Παραλία Κάλαμος" loading="lazy" onclick="openModal('images/kalamos.jpg','Παραλία Κάλαμος')">
+          <div class="suggestion-content">
+            <h3 id="kalamos-title" data-i18n="beach_kalamos_title">Παραλία Κάλαμος</h3>
+            <p data-i18n="beach_kalamos_text">Μία από τις πιο δημοφιλείς παραλίες της περιοχής με λευκή άμμο και τιρκουάζ νερά — πολύ όμορφη για κολύμβηση και ηλιοθεραπεία.</p>
+            <a href="https://www.google.com/maps/place/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1+%CE%9A%CE%AC%CE%BB%CE%B1%CE%BC%CE%BF%CF%82" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Μάγειρας -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="mageiras-title">
+          <img src="images/mageiras.jpg" alt="Παραλία Μάγειρας" loading="lazy" onclick="openModal('images/mageiras.jpg','Παραλία Μάγειρας')">
+          <div class="suggestion-content">
+            <h3 id="mageiras-title" data-i18n="beach_mageiras_title">Παραλία Μάγειρας</h3>
+            <p data-i18n="beach_mageiras_text">Μικρή και ήσυχη παραλία, κατάλληλη για όσους θέλουν να χαλαρώσουν χωρίς πολυκοσμία — καλή επιλογή για ήσυχα μπάνια.</p>
+            <a href="https://www.google.com/maps/place/%CE%9C%CE%AC%CE%B3%CE%B5%CE%B9%CF%81%CE%B1%CF%82+Beach" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Κακολίμανο -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="kakolimano-title">
+          <img src="images/kakolimano.jpg" alt="Παραλία Κακολίμανο" loading="lazy" onclick="openModal('images/kakolimano.jpg','Παραλία Κακολίμανο')">
+          <div class="suggestion-content">
+            <h3 id="kakolimano-title" data-i18n="beach_kakolimano_title">Παραλία Κακολίμανο</h3>
+            <p data-i18n="beach_kakolimano_text">Βραχώδης κόλπος με βαθιά γαλάζια νερά — γραφικό τοπίο και ωραίο για βουτιές σε καθαρά νερά.</p>
+            <a href="https://www.google.com/maps/place/%CE%9A%CE%B1%CE%BA%CE%BF%CE%BB%CE%AF%CE%BC%CE%B1%CE%BD%CE%BF" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Αλμυρίχι -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="almyrichi-title">
+          <img src="images/almyrichi.jpg" alt="Παραλία Αλμυρίχι" loading="lazy" onclick="openModal('images/almyrichi.jpg','Παραλία Αλμυρίχι')">
+          <div class="suggestion-content">
+            <h3 id="almyrichi-title" data-i18n="beach_almyrichi_title">Παραλία Αλμυρίχι</h3>
+            <p data-i18n="beach_almyrichi_text">Μοναδικοί βραχώδεις σχηματισμοί και καθαρά νερά — αγαπημένη των ντόπιων, καλή για βόλτες και εξερεύνηση της ακτής.</p>
+            <a href="https://www.google.com/maps/place/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1+%CE%91%CF%81%CE%BC%CF%85%CF%81%CE%AF%CF%87%CE%B9" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Αλμυροπόταμος -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="almyropotamos-title">
+          <img src="images/almyropotamos.jpg" alt="Παραλία Αλμυροποτάμου" loading="lazy" onclick="openModal('images/almyropotamos.jpg','Παραλία Αλμυροποτάμου')">
+          <div class="suggestion-content">
+            <h3 id="almyropotamos-title" data-i18n="beach_almyropotamos_title">Παραλία Αλμυροποτάμου</h3>
+            <p data-i18n="beach_almyropotamos_text">Εκτεταμένη παραλία κοντά σε εκβολή ποταμού — κοσμοπολίτικη αίσθηση με επιλογές για φαγητό και θαλάσσιες δραστηριότητες.</p>
+            <a href="https://www.google.com/maps/place/%CE%A0%CE%B1%CF%81%CE%B1%CE%BB%CE%AF%CE%B1+%CE%91%CE%BB%CE%BC%CF%85%CF%81%CE%BF%CF%80%CE%BF%CF%84%CE%AC%CE%BC%CE%BF%CF%85" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIMBING / short gallery -->
+  <section id="climbing-fields" class="section" aria-labelledby="climb-title">
+    <div class="container">
+    <h2 id="climb-title" data-i18n="climb_title">Μανίκια — Αναρριχητικά Πεδία</h2>
+
+      <p class="lead" data-i18n="climb_lead">Ένας ανερχόμενος προορισμός για αναρριχητές με εξαιρετικά πεδία και θέα στο Αιγαίο.</p>
+
+      <div class="gallery">
+        <div class="gallery-item" onclick="openModal('images/climb1.jpg','Αναρρίχηση 1')"><img src="images/climb1.jpg" alt="Αναρρίχηση 1" loading="lazy"><div class="overlay"></div></div>
+        <div class="gallery-item" onclick="openModal('images/climb2.jpg','Αναρρίχηση 2')"><img src="images/climb2.jpg" alt="Αναρρίχηση 2" loading="lazy"><div class="overlay"></div></div>
+        <div class="gallery-item" onclick="openModal('images/climb3.jpg','Αναρρίχηση 3')"><img src="images/climb3.jpg" alt="Αναρρίχηση 3" loading="lazy"><div class="overlay"></div></div>
+        <div class="gallery-item" onclick="openModal('images/climb4.jpg','Αναρρίχηση 4')"><img src="images/climb4.jpg" alt="Αναρρίχηση 4" loading="lazy"><div class="overlay"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGHTS -->
+  <section id="sights" class="section" aria-labelledby="sights-title">
+    <div class="container">
+      <h2 id="sights-title" data-i18n="sights_title">Αξιοθέατα</h2>
+
+      <p class="lead" data-i18n="sights_lead">
+  Κοντινά σημεία ενδιαφέροντος — φύση, πολιτισμός και μνημεία που αξίζει να δείτε.
+</p>
+
+      <div class="suggestions-grid" role="list">
+        <!-- Manikia -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="manikia-title">
+          <img src="images/manikia.jpg" alt="Φαράγγι Μανικίων" loading="lazy" onclick="openModal('images/manikia.jpg','Φαράγγι-Καταράκτης Μανικίων')">
+          <div class="suggestion-content">
+            <h3 id="manikia-title" data-i18n="sight_manikia_title">Φαράγγι-Καταράκτης Μανικίων</h3>
+            <p data-i18n="sight_manikia_text">Εντυπωσιακό φαράγγι με μονοπάτια για πεζοπορία, φυσικά ρεύματα και μοναδική θέα, ιδανικό για εξερεύνηση και φωτογραφίες.</p>
+            <a href="https://www.google.com/maps/place/%CE%9C%CE%B1%CE%BD%CE%AF%CE%BA%CE%B9%CE%B1+%CE%95%CF%8D%CE%B2%CE%BF%CE%B9%CE%B1" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Theatre -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="theatre-title">
+          <img src="images/theatre.jpg" alt="Αρχαίο Θέατρο Ερέτριας" loading="lazy" onclick="openModal('images/theatre.jpg','Αρχαίο Θέατρο Ερέτριας')">
+          <div class="suggestion-content">
+            <h3 id="theatre-title" data-i18n="sight_theatre_title">Αρχαίο Θέατρο Ερέτριας</h3>
+            <p data-i18n="sight_theatre_text">Σημαντικό αρχαιολογικό μνημείο με εκπληκτική θέα και πλούσια ιστορία, σημείο αναφοράς για πολιτισμό και τέχνη.</p>
+            <a href="https://www.google.com/maps/place/%CE%91%CF%81%CF%87%CE%B1%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CF%8C+%CE%9C%CE%BF%CF%85%CF%83%CE%B5%CE%AF%CE%BF+%CE%95%CF%81%CE%AD%CF%84%CF%81%CE%B9%CE%B1%CF%82" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Olive -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="olive-title">
+          <img src="images/olive.jpg" alt="Αρχαία Ελιά Κήπων" loading="lazy" onclick="openModal('images/olive.jpg','Αρχαία Ελιά Κήπων')">
+          <div class="suggestion-content">
+            <h3 id="olive-title" data-i18n="sight_olive_title">Αρχαία Ελιά στο χωριό Κήποι</h3>
+            <p data-i18n="sight_olive_text">Μοναδικό δέντρο αιώνων, σύμβολο της ιστορίας και της παράδοσης της περιοχής, ιδανικό για μια ήσυχη επίσκεψη.</p>
+            <a href="https://www.google.com/maps/place/Ancient+olive+tree.+%CE%91%CF%81%CF%87%CE%B1%CE%AF%CE%B1+%CE%B5%CE%BB%CE%B9%CE%AC+%CE%BA%CE%B7%CF%80%CF%89%CE%BD" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Kolethra -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="kolethra-title">
+          <img src="images/kolethra.jpg" alt="Πηγή Κολέθρα" loading="lazy" onclick="openModal('images/kolethra.jpg','Πηγή Κολέθρα')">
+          <div class="suggestion-content">
+            <h3 id="kolethra-title" data-i18n="sight_kolethra_title">Πηγή Κολέθρα</h3>
+            <p data-i18n="sight_kolethra_text">Φυσική πηγή με καθαρά νερά και γραφικό περιβάλλον, ιδανική για σύντομη στάση ή πικνίκ στη φύση.</p>
+            <a href="https://www.google.com/maps/place/%CE%A0%CE%B7%CE%B3%CE%AE+%CE%9A%CE%BF%CE%BB%CE%AD%CE%B8%CF%81%CE%B1%CF%82" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Panagia -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="panagia-title">
+          <img src="images/panagia.jpg" alt="Κρυφή Παναγιά" loading="lazy" onclick="openModal('images/panagia.jpg','Κρυφή Παναγιά')">
+          <div class="suggestion-content">
+            <h3 id="panagia-title" data-i18n="sight_panagia_title">Κρυφή Παναγιά</h3>
+            <p data-i18n="sight_panagia_text">Ιερό εκκλησάκι κρυμμένο μέσα στη φύση, προσφέρει γαλήνη και μοναδική αίσθηση απομόνωσης για επισκέπτες.</p>
+            <a href="https://www.google.com/maps/place/%CE%9A%CF%81%CF%85%CF%86%CE%AE+%CE%A0%CE%B1%CE%BD%CE%B1%CE%B3%CE%B9%CE%AC" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+
+        <!-- Papanikolaou -->
+        <article class="suggestion-card" role="listitem" aria-labelledby="papanikolaou-title">
+          <img src="images/papanikolaou.jpg" alt="Μουσείο Παπανικολάου" loading="lazy" onclick="openModal('images/papanikolaou.jpg','Μουσείο Παπανικολάου')">
+          <div class="suggestion-content">
+            <h3 id="papanikolaou-title" data-i18n="sight_papanikolaou_title">Μουσείο Παπανικολάου</h3>
+            <p data-i18n="sight_papanikolaou_text">Αφιερωμένο στον μεγάλο επιστήμονα, προσφέρει εκθέσεις και πληροφορίες για τη ζωή και το έργο του Κ. Παπανικολάου.</p>
+            <a href="https://www.google.com/maps/place/%CE%A4%CE%BF+%CF%83%CF%80%CE%AF%CF%84%CE%B9+%CF%84%CE%BF%CF%85+%CE%93%CE%B5%CF%89%CF%81%CE%B3%CE%AF%CE%BF%CF%85+%CE%A0%CE%B1%CF%80%CE%B1%CE%BD%CE%B9%CE%BA%CE%BF%CE%BB%CE%AC%CE%BF%CF%85" target="_blank" rel="noopener">Δείτε στο χάρτη</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+  <!-- BOOKING -->
+  <section id="booking" class="section">
+    <div class="container">
+      <h2 data-i18n="nav_booking">Αίτημα Κράτησης</h2>
+      <div class="booking-container">
+        <form class="booking-form" id="booking-form">
+          <div class="form-group">
+            <label for="name" data-i18n="form_name">Ονοματεπώνυμο *</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="form_email">Email *</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="checkin" data-i18n="form_checkin">Άφιξη</label>
+              <input id="checkin" name="checkin" type="date" required>
+            </div>
+            <div class="form-group">
+              <label for="checkout" data-i18n="form_checkout">Αναχώρηση</label>
+              <input id="checkout" name="checkout" type="date" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="form_message">Μήνυμα / Προτιμήσεις</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="submit-btn" id="submit-btn" data-i18n="form_submit">Αποστολή</button>
+        </form>
+        <div id="calendar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section section">
+  <div class="container">
+    <h2 data-i18n="contact_title">Επικοινωνία</h2>
+
+    <p><strong>Giannis</strong></p>
+    <p>
+      WhatsApp / Viber:
+      <a href="https://wa.me/306972765636" target="_blank" rel="noopener">+30 697 276 5636</a>
+    </p>
+    <p>
+      Email:
+      <a href="mailto:jopouris@hotmail.com">jopouris@hotmail.com</a>
+    </p>
+
+    <div class="map-button-container">
+      <a
+        id="mapLink"
+        class="map-button"
+        href="https://www.google.com/maps/place/%CE%9C%CE%B9%CE%BA%CF%81%CE%AE+%CE%92%CE%B9%CE%BB%CE%B1+%CE%93%CE%B5%CF%81%CE%AC%CE%BD%CE%B9"
+        target="_blank"
+        rel="noopener"
+        aria-label="Άνοιγμα τοποθεσίας στο Google Maps"
+      >
+        <span data-i18n="map_button">Δείτε τη θέση μας εδώ</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal" class="modal" aria-hidden="true" role="dialog">
+  <button class="modal-close" id="modal-close">&times;</button>
+  <img id="modal-img" class="modal-content" src="" alt="">
+</div>
+
+<!-- Floating contact buttons -->
+<div class="contact-buttons">
+  <a href="https://wa.me/306972765636" target="_blank" rel="noopener">
+    <i class="fab fa-whatsapp"></i>WhatsApp
+  </a>
+  <a href="viber://chat?number=+306972765636">
+    <i class="fab fa-viber"></i>Viber
+  </a>
+  <a href="mailto:jopouris@hotmail.com">
+    <i class="fas fa-envelope"></i>Email
+  </a>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; <span id="year"></span> Small Villa Gerani · All rights reserved</p>
+  </div>
+</footer>
+
+<!-- External Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script src="js/nav.js" defer></script>
+<script src="js/modal.js" defer></script>
+<script src="js/i18n.js" defer></script>
+<script type="module" src="js/calendar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+<script type="module" src="js/booking.js"></script>
+<script type="module" src="js/firebase.js"></script>
+<script src="js/contact.js" defer></script>
+<script src="js/main.js" defer></script>
+
+
+</body>
+</html>
